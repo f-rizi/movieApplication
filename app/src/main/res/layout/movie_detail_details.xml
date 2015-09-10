@@ -1,0 +1,62 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:internal="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_short">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_standard">
+
+        <com.example.emamianrizif.Movie.views.MovieDetailCardLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            internal:see_more_visibility="false"
+            android:layout_marginBottom="@dimen/margin_extra_short"
+            internal:title="Details" />
+
+        <com.example.emamianrizif.Movie.views.MovieDetailInfoLayout
+            android:id="@+id/released_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra_short"
+            android:visibility="gone"
+            internal:title="Released" />
+
+        <com.example.emamianrizif.Movie.views.MovieDetailInfoLayout
+            android:id="@+id/runtime_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra_short"
+            android:visibility="gone"
+            internal:title="Runtime" />
+
+        <com.example.emamianrizif.Movie.views.MovieDetailInfoLayout
+            android:id="@+id/genres_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra_short"
+            android:visibility="gone"
+            internal:title="Genres" />
+
+        <com.example.emamianrizif.Movie.views.MovieDetailInfoLayout
+            android:id="@+id/budget_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra_short"
+            android:visibility="gone"
+            internal:title="Budget" />
+
+        <com.example.emamianrizif.Movie.views.MovieDetailInfoLayout
+            android:id="@+id/language_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra_short"
+            android:visibility="gone"
+            internal:title="Language" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

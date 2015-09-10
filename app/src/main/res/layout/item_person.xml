@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="@dimen/margin_short"
+    android:paddingBottom="@dimen/margin_short"
+    android:paddingEnd="@dimen/margin_standard"
+    android:paddingStart="@dimen/margin_standard">
+
+    <ImageView
+        android:id="@+id/person_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8dp"
+        android:background="@color/blue_gray_300"
+        android:src="@drawable/ic_profile_placeholder"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/person_details"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>

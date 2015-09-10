@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.emamianrizif.Movie" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".helpers.MoviesApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MovieDetailsActivity"
+            android:label="@string/title_activity_movie_details"
+            android:parentActivityName=".activities.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activities.MovieImageGalleryActivity"
+            android:label="@string/title_activity_movie_image_gallery" >
+        </activity>
+        <activity
+            android:name=".activities.PersonDetailsActivity"
+            android:label="@string/title_activity_person_details"
+            android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+            android:name=".activities.MoviePeopleListActivity"
+            android:label="@string/title_activity_movie_people_list"
+            android:parentActivityName=".activities.MovieDetailsActivity">
+        </activity>
+    </application>
+
+</manifest>

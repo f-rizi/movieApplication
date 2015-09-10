@@ -1,0 +1,90 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.example.emamianrizif.Movie.fragments.NavigationDrawerFragment">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:background="@drawable/nav_back"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/nav_profile_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile_rect"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="16dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_100">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/nav_item_profile"
+                layout="@layout/navigation_item">
+            </include>
+
+            <include
+                android:id="@+id/nav_item_edit"
+                layout="@layout/navigation_item">
+            </include>
+
+            <include
+                android:id="@+id/nav_item_favorites"
+                layout="@layout/navigation_item">
+            </include>
+
+            <include
+                android:id="@+id/nav_item_location"
+                layout="@layout/navigation_item">
+            </include>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_400">
+            </View>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <include
+                android:id="@+id/nav_item_settings"
+                layout="@layout/navigation_item">
+            </include>
+
+            <include
+                android:id="@+id/nav_item_help_feedback"
+                layout="@layout/navigation_item">
+            </include>
+
+            <include
+                android:id="@+id/nav_item_about"
+                layout="@layout/navigation_item">
+            </include>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

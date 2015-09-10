@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.emamianrizif.Movie.activities.MovieDetailsActivity3">
+
+    <com.example.emamianrizif.Movie.views.NotifyingScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@color/blue_gray_300"/>
+
+            <LinearLayout
+                android:id="@+id/second_part"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:background="@color/blue_gray_300">
+
+                <ImageView
+                    android:id="@+id/backdrop"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_next_to_poster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                    android:singleLine="true"
+                    android:paddingLeft="8dp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/movie_detail_overview" />
+
+            <TextView
+                android:id="@+id/tag_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:padding="@dimen/margin_short"
+                android:background="@color/blue_gray_300"/>
+
+            <!--<include layout="@layout/movie_details_images" />-->
+
+            <FrameLayout
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/movie_detail_details"/>
+
+            <include layout="@layout/movie_details_videos"/>
+
+            <include layout="@layout/movie_details_casts"/>
+
+            <include layout="@layout/movie_details_crew"/>
+
+        </LinearLayout>
+    </com.example.emamianrizif.Movie.views.NotifyingScrollView>
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/transparent_tool_bar" />
+
+</FrameLayout>
